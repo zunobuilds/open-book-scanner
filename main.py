@@ -9,13 +9,6 @@ img = Image.open('test_images/test_image1.png')
 format = img.format
 
 def illum_correction_formula(i,b):
-    # Illumination correction formula: C = (I / B) * 255
-    # C = Corrected pixel intensity
-    # I = Original greyscale pixel intensity
-    # B = Estimated background intensity
-    # 255 = Maximum intensity of an 8-bit greyscale pixel
-    # Dividing I by B compensates for uneven lighting.
-    # Multiplying by 255 scales the result to pixel intensity units.
     return (i/b)*255
 
 img = img.rotate(90,expand=True)
